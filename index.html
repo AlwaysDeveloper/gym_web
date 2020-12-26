@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles//global.css">
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: url('./images/backgound_body.jpg');
+            background-size: cover;
+        }
+        #main-body{
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+        #head{
+            height: 10vh;
+            background-color: rgba(0, 0, 0, 0.404);
+        }
+        #body{
+            height: 70%;
+            background-color: blueviolet;
+        }
+        #footer{
+            height: 40%;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-body" class="row">
+        <div id="head" class="col-sm-12"></div>
+        <div id="body" class="col-sm-12"></div>
+        <div id="footer" class="col-sm-12"></div>
+    </div>
+    <!-- Area to include dependencies -->
+    <script src="./bin/jQuery.js"></script>
+    <script src="./bin/popper.min.js"></script>
+    <script src="./bin/bootstrap.min.js"></script>
+
+    <!-- Area to include components and scripts -->
+    <script src="./index.js"></script>
+    <script src="./app/components/header.js"></script>
+</body>
+</html>
