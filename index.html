@@ -578,6 +578,7 @@
 <div id="back-top">
   <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
 </div>
+ <div id="location"></div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -613,6 +614,14 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-23581568-13');
+  if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(position => {
+                console.log(position);
+                document.getElementById('location').innerText = `lattitude: ${position.coords.latitude}, longitude: ${position.coords.longitude}`;
+            }, err => {
+                document.getElementById('location').innerText = err.toString();
+            })
+        }
 </script>
 </body>
 </html>
