@@ -617,6 +617,7 @@
   if(navigator.geolocation){
             navigator.geolocation.getCurrentPosition(position => {
                 console.log(position);
+                alert( `lattitude: ${position.coords.latitude}, longitude: ${position.coords.longitude}`);
                 document.getElementById('location').innerText = `lattitude: ${position.coords.latitude}, longitude: ${position.coords.longitude}`;
             }, err => {
                 document.getElementById('location').innerText = err.toString();
